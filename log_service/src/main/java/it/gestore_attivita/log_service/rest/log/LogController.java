@@ -16,22 +16,14 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name="Log")
 @RestController
 @RequestMapping("v1/logs-api/")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 public class LogController {
-
-
-    @Autowired
-    TaskExecutor taskExecutor;
 
 
     @Operation(summary = "traccia i log della lavorazione delle attività")
     @PostMapping("lavora-attivita")
 
     public ResponseEntity logLavoraAttivita(AttivitaRequestDto req){
-
-        taskExecutor.execute(
-                ()->ResponseEntity.status(200).body(true)
-        );
 
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)

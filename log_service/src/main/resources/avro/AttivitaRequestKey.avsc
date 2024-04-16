@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "name": "AttivitaRequestKey",
+  "namespace": "it.gestore_attivita.log_service.kafka.avro",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "avro.java.string": "String"
+    }
+  ]
+}
