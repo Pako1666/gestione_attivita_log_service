@@ -1,0 +1,2 @@
+se stai leggendo sto file, vuol dire che sono riuscito a fare un push sul mio repository, dalla mia macchina linux.
+Era ora cazzo!
