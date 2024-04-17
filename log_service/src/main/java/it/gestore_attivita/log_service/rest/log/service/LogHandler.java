@@ -64,10 +64,22 @@ public class LogHandler {
 
     @Before("execution(public void it.gestore_attivita.log_service.kafka.KafkaConsumer" +
             ".consumeAttivitaTopic(org.apache.kafka.clients.consumer.ConsumerRecord))")
-    public void logKafkaHandler(JoinPoint jp){
+    public void logKafkaHandlerAttivitaTopic(JoinPoint jp){
         log.info("Messaggio Kafka Ricevuto");
         ConsumerRecord record = (ConsumerRecord)jp.getArgs()[0];
 
+
+        log.info(String.format("Chiave del messaggio Kafka: %s",record.key()));
+        log.info(String.format("Body del messaggio Kafka: %s",record.value().toString()));
+    }
+
+    @Before("execution(public void it.gestore_attivita.log_service.kafka.KafkaConsumer" +
+            ".consumeAttivitaListTopic(org.apache.kafka.clients.consumer.ConsumerRecord))")
+    public void logKafkaHandlerAttivitaListTopic(JoinPoint jp){
+        log.info("Messaggio Kafka Ricevuto");
+        ConsumerRecord record = (ConsumerRecord)jp.getArgs()[0];
+
+        //leggere l'id della chiave
 
         log.info(String.format("Chiave del messaggio Kafka: %s",record.key()));
         log.info(String.format("Body del messaggio Kafka: %s",record.value().toString()));

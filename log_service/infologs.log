@@ -3966,3 +3966,599 @@ Caused by: java.lang.IllegalStateException: No group.id found in consumer config
 2024-04-17T18:26:10.973+02:00  INFO 521991 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-gestione_attivita_kafka-2 unregistered
 2024-04-17T18:26:10.973+02:00  INFO 521991 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
 2024-04-17T18:26:10.973+02:00  INFO 521991 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
+2024-04-17T18:33:58.487+02:00  INFO 535113 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : Starting LogServiceApplicationTests using Java 17.0.10 with PID 535113 (started by rcarrierizerodd in /home/rcarrierizerodd/Scrivania/esercizi/logservice/gestione_attivita_log_service/log_service)
+2024-04-17T18:33:58.488+02:00  INFO 535113 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T18:33:58.514+02:00 TRACE 535113 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5b69fd74, started on Wed Apr 17 18:33:58 CEST 2024
+2024-04-17T18:33:59.227+02:00  WARN 535113 --- [log_service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-04-17T18:33:59.258+02:00  INFO 535113 --- [log_service] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-17T18:33:59.260+02:00 TRACE 535113 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-04-17T18:33:59.261+02:00 TRACE 535113 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-04-17T18:33:59.795+02:00 TRACE 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	i.g.l.r.l.LogController:
+	{POST [/v1/logs-api/lavora-attivita]}: logLavoraAttivita(AttivitaRequestDto)
+	{POST [/v1/logs-api/verifica-attivita]}: logVerificaAttivita(AttivitaRequestDto)
+	{POST [/v1/logs-api/insert-attivita], consumes [application/json], produces [application/json]}: logInsertAttivita(AttivitaRequestDto)
+	{GET [/v1/logs-api/fetch-attivita/{id}]}: logGetAttivitaById(Long)
+	{GET [/v1/logs-api/fetch-attivita/all], produces [application/json]}: logGetAllAttivita()
+2024-04-17T18:33:59.802+02:00 TRACE 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-04-17T18:33:59.813+02:00 TRACE 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-04-17T18:33:59.816+02:00 TRACE 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-04-17T18:33:59.817+02:00 TRACE 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-04-17T18:33:59.820+02:00 DEBUG 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-04-17T18:33:59.826+02:00 DEBUG 535113 --- [log_service] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-04-17T18:33:59.842+02:00 TRACE 535113 --- [log_service] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-04-17T18:33:59.851+02:00 TRACE 535113 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:33:59.852+02:00 TRACE 535113 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-17T18:33:59.852+02:00 TRACE 535113 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:33:59.853+02:00 TRACE 535113 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:33:59.853+02:00 DEBUG 535113 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-17T18:33:59.937+02:00 DEBUG 535113 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-17T18:33:59.963+02:00 DEBUG 535113 --- [log_service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-17T18:33:59.983+02:00  WARN 535113 --- [log_service] [main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-04-17T18:34:00.266+02:00 TRACE 535113 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@6a51ae7c]
+2024-04-17T18:34:00.297+02:00  INFO 535113 --- [log_service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.1.4:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-gestione_attivita_kafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = gestione_attivita_kafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2024-04-17T18:34:00.378+02:00  INFO 535113 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:00.383+02:00  INFO 535113 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:00.441+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-17T18:34:00.442+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-17T18:34:00.443+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713371640440
+2024-04-17T18:34:00.445+02:00  INFO 535113 --- [log_service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Subscribed to topic(s): attivita_topic
+2024-04-17T18:34:00.452+02:00  INFO 535113 --- [log_service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.1.4:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-gestione_attivita_kafka-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = gestione_attivita_kafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2024-04-17T18:34:00.453+02:00  INFO 535113 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:00.453+02:00  INFO 535113 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:00.458+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-17T18:34:00.458+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-17T18:34:00.459+02:00  INFO 535113 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713371640458
+2024-04-17T18:34:00.459+02:00  INFO 535113 --- [log_service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Subscribed to topic(s): attivita_list_topic
+2024-04-17T18:34:00.470+02:00  INFO 535113 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : Started LogServiceApplicationTests in 2.291 seconds (process running for 2.968)
+2024-04-17T18:34:00.696+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Cluster ID: H9pUU8wFRf6V8ikNHmS0Pg
+2024-04-17T18:34:00.696+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Cluster ID: H9pUU8wFRf6V8ikNHmS0Pg
+2024-04-17T18:34:00.697+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Discovered group coordinator 192.168.1.4:9092 (id: 2147483647 rack: null)
+2024-04-17T18:34:00.697+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Discovered group coordinator 192.168.1.4:9092 (id: 2147483647 rack: null)
+2024-04-17T18:34:00.698+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:00.699+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:00.710+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: need to re-join with the given member-id: consumer-gestione_attivita_kafka-2-be66a400-b1a5-416d-ac46-e5980183fc50
+2024-04-17T18:34:00.710+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: need to re-join with the given member-id: consumer-gestione_attivita_kafka-1-5ef254dc-b95d-4a14-8866-953a04457f82
+2024-04-17T18:34:00.711+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-04-17T18:34:00.711+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-04-17T18:34:00.711+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:00.711+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:01.085+02:00 DEBUG 535113 --- [log_service] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5b69fd74, started on Wed Apr 17 18:33:58 CEST 2024
+2024-04-17T18:34:01.088+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Member consumer-gestione_attivita_kafka-1-5ef254dc-b95d-4a14-8866-953a04457f82 sending LeaveGroup request to coordinator 192.168.1.4:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-04-17T18:34:01.088+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Member consumer-gestione_attivita_kafka-2-be66a400-b1a5-416d-ac46-e5980183fc50 sending LeaveGroup request to coordinator 192.168.1.4:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-04-17T18:34:01.089+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.089+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.090+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.090+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.090+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Unsubscribed all topics or patterns and assigned partitions
+2024-04-17T18:34:01.090+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Unsubscribed all topics or patterns and assigned partitions
+2024-04-17T18:34:01.091+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.091+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.091+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:01.091+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:02.924+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-17T18:34:02.924+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-17T18:34:02.925+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-17T18:34:02.925+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-17T18:34:02.925+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-17T18:34:02.925+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-17T18:34:02.931+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-gestione_attivita_kafka-2 unregistered
+2024-04-17T18:34:02.931+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-gestione_attivita_kafka-1 unregistered
+2024-04-17T18:34:02.932+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
+2024-04-17T18:34:02.932+02:00  INFO 535113 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
+2024-04-17T18:34:48.775+02:00  INFO 535262 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : Starting LogServiceApplicationTests using Java 17.0.10 with PID 535262 (started by rcarrierizerodd in /home/rcarrierizerodd/Scrivania/esercizi/logservice/gestione_attivita_log_service/log_service)
+2024-04-17T18:34:48.776+02:00  INFO 535262 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T18:34:48.802+02:00 TRACE 535262 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5b69fd74, started on Wed Apr 17 18:34:48 CEST 2024
+2024-04-17T18:34:49.513+02:00  WARN 535262 --- [log_service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-04-17T18:34:49.535+02:00  INFO 535262 --- [log_service] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-17T18:34:49.537+02:00 TRACE 535262 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'messageSource' bean, using [Empty MessageSource]
+2024-04-17T18:34:49.538+02:00 TRACE 535262 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : No 'applicationEventMulticaster' bean, using [SimpleApplicationEventMulticaster]
+2024-04-17T18:34:50.054+02:00 TRACE 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	i.g.l.r.l.LogController:
+	{POST [/v1/logs-api/lavora-attivita]}: logLavoraAttivita(AttivitaRequestDto)
+	{POST [/v1/logs-api/verifica-attivita]}: logVerificaAttivita(AttivitaRequestDto)
+	{POST [/v1/logs-api/insert-attivita], consumes [application/json], produces [application/json]}: logInsertAttivita(AttivitaRequestDto)
+	{GET [/v1/logs-api/fetch-attivita/{id}]}: logGetAttivitaById(Long)
+	{GET [/v1/logs-api/fetch-attivita/all], produces [application/json]}: logGetAllAttivita()
+2024-04-17T18:34:50.061+02:00 TRACE 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-04-17T18:34:50.072+02:00 TRACE 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-04-17T18:34:50.075+02:00 TRACE 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-04-17T18:34:50.076+02:00 TRACE 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-04-17T18:34:50.080+02:00 DEBUG 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-04-17T18:34:50.086+02:00 DEBUG 535262 --- [log_service] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-04-17T18:34:50.102+02:00 TRACE 535262 --- [log_service] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-04-17T18:34:50.111+02:00 TRACE 535262 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:34:50.111+02:00 TRACE 535262 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-17T18:34:50.112+02:00 TRACE 535262 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:34:50.112+02:00 TRACE 535262 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-04-17T18:34:50.112+02:00 DEBUG 535262 --- [log_service] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-17T18:34:50.194+02:00 DEBUG 535262 --- [log_service] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-17T18:34:50.218+02:00 DEBUG 535262 --- [log_service] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-17T18:34:50.237+02:00  WARN 535262 --- [log_service] [main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-04-17T18:34:50.512+02:00 TRACE 535262 --- [log_service] [main] o.s.w.c.s.GenericWebApplicationContext   : Using LifecycleProcessor [org.springframework.context.support.DefaultLifecycleProcessor@e162a35]
+2024-04-17T18:34:50.548+02:00  INFO 535262 --- [log_service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.1.4:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-gestione_attivita_kafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = gestione_attivita_kafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2024-04-17T18:34:50.630+02:00  INFO 535262 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:50.634+02:00  INFO 535262 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:50.683+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-17T18:34:50.684+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-17T18:34:50.684+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713371690682
+2024-04-17T18:34:50.686+02:00  INFO 535262 --- [log_service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Subscribed to topic(s): attivita_topic
+2024-04-17T18:34:50.693+02:00  INFO 535262 --- [log_service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [192.168.1.4:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-gestione_attivita_kafka-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = gestione_attivita_kafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2024-04-17T18:34:50.694+02:00  INFO 535262 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:50.694+02:00  INFO 535262 --- [log_service] [main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	schema.registry.url = [http://192.168.1.4:8081]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	specific.avro.reader = false
+
+2024-04-17T18:34:50.699+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.1
+2024-04-17T18:34:50.700+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 5e3c2b738d253ff5
+2024-04-17T18:34:50.700+02:00  INFO 535262 --- [log_service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1713371690699
+2024-04-17T18:34:50.700+02:00  INFO 535262 --- [log_service] [main] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Subscribed to topic(s): attivita_list_topic
+2024-04-17T18:34:50.709+02:00  INFO 535262 --- [log_service] [main] i.g.l.LogServiceApplicationTests         : Started LogServiceApplicationTests in 2.203 seconds (process running for 2.874)
+2024-04-17T18:34:50.939+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Cluster ID: H9pUU8wFRf6V8ikNHmS0Pg
+2024-04-17T18:34:50.939+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Cluster ID: H9pUU8wFRf6V8ikNHmS0Pg
+2024-04-17T18:34:50.940+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Discovered group coordinator 192.168.1.4:9092 (id: 2147483647 rack: null)
+2024-04-17T18:34:50.940+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Discovered group coordinator 192.168.1.4:9092 (id: 2147483647 rack: null)
+2024-04-17T18:34:50.942+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:50.942+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: need to re-join with the given member-id: consumer-gestione_attivita_kafka-2-caac2158-e64c-4bae-84c5-5c6836827356
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: need to re-join with the given member-id: consumer-gestione_attivita_kafka-1-9edda0df-6e04-4b7d-937d-5867fc7db6fc
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:50.953+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] (Re-)joining group
+2024-04-17T18:34:51.259+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Successfully joined group with generation Generation{generationId=4, memberId='consumer-gestione_attivita_kafka-2-caac2158-e64c-4bae-84c5-5c6836827356', protocol='range'}
+2024-04-17T18:34:51.259+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Successfully joined group with generation Generation{generationId=4, memberId='consumer-gestione_attivita_kafka-1-9edda0df-6e04-4b7d-937d-5867fc7db6fc', protocol='range'}
+2024-04-17T18:34:51.330+02:00 DEBUG 535262 --- [log_service] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5b69fd74, started on Wed Apr 17 18:34:48 CEST 2024
+2024-04-17T18:34:51.334+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Member consumer-gestione_attivita_kafka-1-9edda0df-6e04-4b7d-937d-5867fc7db6fc sending LeaveGroup request to coordinator 192.168.1.4:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-04-17T18:34:51.334+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Member consumer-gestione_attivita_kafka-2-caac2158-e64c-4bae-84c5-5c6836827356 sending LeaveGroup request to coordinator 192.168.1.4:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Unsubscribed all topics or patterns and assigned partitions
+2024-04-17T18:34:51.335+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] fkaConsumerFactory$ExtendedKafkaConsumer : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Unsubscribed all topics or patterns and assigned partitions
+2024-04-17T18:34:51.336+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.336+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.336+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.337+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Request joining group due to: consumer pro-actively leaving the group
+2024-04-17T18:34:51.378+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-2, groupId=gestione_attivita_kafka] Generation data was cleared by heartbeat thread to Generation{generationId=-1, memberId='', protocol='null'} and state is now UNJOINED before receiving SyncGroup response, marking this rebalance as failed and retry
+2024-04-17T18:34:51.379+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-gestione_attivita_kafka-1, groupId=gestione_attivita_kafka] Generation data was cleared by heartbeat thread to Generation{generationId=-1, memberId='', protocol='null'} and state is now UNJOINED before receiving SyncGroup response, marking this rebalance as failed and retry
+2024-04-17T18:34:51.382+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-17T18:34:51.382+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-04-17T18:34:51.382+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-17T18:34:51.382+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-17T18:34:51.383+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-17T18:34:51.383+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-04-17T18:34:51.389+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-gestione_attivita_kafka-1 unregistered
+2024-04-17T18:34:51.389+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-gestione_attivita_kafka-2 unregistered
+2024-04-17T18:34:51.389+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
+2024-04-17T18:34:51.389+02:00  INFO 535262 --- [log_service] [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : gestione_attivita_kafka: Consumer stopped
