@@ -1,12 +1,10 @@
 package it.gestore_attivita.log_service.rest.log.service;
 
 
-
+import it.gestore_attivita.log_service.kafka.avro.AttivitaRequestGenerated;
 import it.gestore_attivita.log_service.kafka.avro.AttivitaRequestKey;
-import it.gestore_attivita.log_service.kafka.avro.AttivitaRequestValue;
 import it.gestore_attivita.log_service.rest.log.dto.AttivitaRequestDto;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.protocol.types.Field;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -60,15 +58,18 @@ public class LogHandler {
         log.info("Tutte le attività sono state recuperate dal DB");
     }
 
-    /*@Before("execution(public void it.gestore_attivita.log_service.kafka.KafkaConsumer" +
-            ".consumeKafkaMessage(org.apache.kafka.clients.consumer.ConsumerRecord))")
+
+
+    //log di kafka
+
+    @Before("execution(public void it.gestore_attivita.log_service.kafka.KafkaConsumer" +
+            ".consumeAttivitaTopic(org.apache.kafka.clients.consumer.ConsumerRecord))")
     public void logKafkaHandler(JoinPoint jp){
         log.info("Messaggio Kafka Ricevuto");
-        ConsumerRecord<AttivitaRequestKey, AttivitaRequestValue> record = (ConsumerRecord<AttivitaRequestKey, AttivitaRequestValue>)jp.getArgs()[0];
-        AttivitaRequestKey key = record.key();
-        AttivitaRequestValue value = record.value();
+        ConsumerRecord record = (ConsumerRecord)jp.getArgs()[0];
 
-        log.info(String.format("Chiave del messaggio Kafka: %s",key.getId()));
-        log.info(String.format("Body del messaggio Kafka: %s",value.toString()));
-    }*/
+
+        log.info(String.format("Chiave del messaggio Kafka: %s",record.key()));
+        log.info(String.format("Body del messaggio Kafka: %s",record.value().toString()));
+    }
 }
